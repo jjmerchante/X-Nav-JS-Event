@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Change color</title>
+    </head>
+    <body>
+        Text: <input type="text" id="textColor">
+        <p id="color" style="background-color:;">.</p>
+
+        <script type="text/javascript">
+            var textColor = document.getElementById('textColor');
+            var elementColor = document.getElementById('color');
+            changeColor = function(){
+                bgColor = 'background-color:' + textColor.value + ';'
+                elementColor.setAttribute('style', bgColor)
+            }
+            textColor.addEventListener('input', changeColor);
+        </script>
+    </body>
+</html>
